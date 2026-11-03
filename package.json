@@ -1,0 +1,13 @@
+{
+  "name": "bot-fiscalize-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demonstração isolada de captura de conteúdo do BOT Fiscalize com dados fictícios.",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node preview.mjs",
+    "test": "node --test tests/*.test.cjs"
+  }
+}
