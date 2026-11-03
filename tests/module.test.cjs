@@ -1,0 +1,5 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');
+const source=require('../src/ticket-content.cjs');
+test('Módulo e cópia para o navegador preservam exatamente o mesmo código',()=>{assert.equal(fs.readFileSync(require.resolve('../src/ticket-content.cjs'),'utf8'),fs.readFileSync(require.resolve('../demo/ticket-content.cjs'),'utf8'));});
+test('Importação em Node não acessa DOM e expõe as duas funções assíncronas',()=>{assert.equal(source.captureTicketContent.constructor.name,'AsyncFunction');assert.equal(source.waitForPrintImages.constructor.name,'AsyncFunction');});
+test('Sessão expirada falha antes de tentar capturar informações',async()=>{const context={module:{exports:{}},document:{querySelectorAll:()=>[],querySelector:()=>({})},Date,setTimeout};vm.runInNewContext(fs.readFileSync(require.resolve('../src/ticket-content.cjs'),'utf8'),context);await assert.rejects(context.module.exports.captureTicketContent({timeoutMs:100}),/Sessao expirada/);});
