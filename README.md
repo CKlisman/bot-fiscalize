@@ -2,9 +2,11 @@
 
 Projeto de apoio ao monitoramento de chamados e à geração de relatórios, desenvolvido por **Caio Klisman** com apoio do Codex.
 
-![Interface real do BOT Fiscalize em funcionamento](docs/interface-real.png)
+![Interface real do BOT Fiscalize em funcionamento](docs/screenshots/01-monitoramento.png)
 
-Captura real do aplicativo em funcionamento, fornecida pelo autor. Identificações, conta institucional e conteúdo dos chamados foram cobertos para preservar dados pessoais. A interface, os indicadores e os controles são os do aplicativo real. O código deste repositório continua sendo a amostra isolada descrita abaixo.
+Captura feita no aplicativo Windows instalado e em funcionamento. Identificações, conta institucional e conteúdo dos chamados foram cobertos para preservar dados pessoais. A interface, os indicadores e os controles são os do aplicativo real. O código deste repositório continua sendo a amostra isolada descrita abaixo.
+
+[Veja a galeria com as principais telas reais](docs/GALERIA.md)
 
 ## Escopo desta publicação
 
